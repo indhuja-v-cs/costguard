@@ -1,0 +1,40 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.5.7",
+  "resource_changes": [
+    {
+      "address": "azurerm_linux_virtual_machine.web",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "web",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["delete", "create"],
+        "before": {
+          "admin_username": "azureuser",
+          "location": "eastus",
+          "name": "web-vm",
+          "resource_group_name": "example-resources",
+          "size": "Standard_B2s",
+          "tags": {
+            "environment": "production"
+          }
+        },
+        "after": {
+          "admin_username": "azureuser",
+          "location": "westus2",
+          "name": "web-vm-v2",
+          "resource_group_name": "example-resources",
+          "size": "Standard_D2s_v3",
+          "tags": {
+            "environment": "production"
+          }
+        },
+        "after_unknown": {
+          "id": true,
+          "private_ip_address": true
+        }
+      }
+    }
+  ]
+}
