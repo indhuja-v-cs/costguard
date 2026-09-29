@@ -1,0 +1,53 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.5.7",
+  "resource_changes": [
+    {
+      "address": "azurerm_linux_virtual_machine.app",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "app",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "admin_username": "azureuser",
+          "location": "West Europe",
+          "name": "app-vm",
+          "resource_group_name": "example-resources",
+          "size": "Custom_Unknown_SKU_Xyz123",
+          "tags": {
+            "environment": "test"
+          }
+        },
+        "after_unknown": {
+          "id": true,
+          "private_ip_address": true
+        }
+      }
+    },
+    {
+      "address": "azurerm_linux_virtual_machine.missing_region",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "missing_region",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "admin_username": "azureuser",
+          "name": "no-region-vm",
+          "resource_group_name": "example-resources",
+          "size": "Standard_B2s",
+          "tags": {}
+        },
+        "after_unknown": {
+          "id": true,
+          "location": true
+        }
+      }
+    }
+  ]
+}
