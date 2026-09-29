@@ -1,0 +1,69 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.5.7",
+  "resource_changes": [
+    {
+      "address": "azurerm_linux_virtual_machine.web",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "web",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "admin_username": "azureuser",
+          "location": "eastus",
+          "name": "web-vm",
+          "resource_group_name": "example-resources",
+          "size": "Standard_B2s",
+          "tags": {
+            "environment": "staging"
+          }
+        },
+        "after": {
+          "admin_username": "azureuser",
+          "location": "eastus",
+          "name": "web-vm",
+          "resource_group_name": "example-resources",
+          "size": "Standard_B2s",
+          "tags": {
+            "environment": "production",
+            "team": "platform"
+          }
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "address": "azurerm_network_security_group.web",
+      "mode": "managed",
+      "type": "azurerm_network_security_group",
+      "name": "web",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "location": "eastus",
+          "name": "web-nsg",
+          "security_rule": []
+        },
+        "after": {
+          "location": "eastus",
+          "name": "web-nsg",
+          "security_rule": [
+            {
+              "name": "allow-http",
+              "priority": 100,
+              "direction": "Inbound",
+              "access": "Allow",
+              "protocol": "Tcp",
+              "source_port_range": "*",
+              "destination_port_range": "80"
+            }
+          ]
+        },
+        "after_unknown": {}
+      }
+    }
+  ]
+}
