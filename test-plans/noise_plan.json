@@ -1,0 +1,91 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.5.7",
+  "resource_changes": [
+    {
+      "address": "azurerm_resource_group.main",
+      "type": "azurerm_resource_group",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "rg-main"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_virtual_network.main",
+      "type": "azurerm_virtual_network",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "vnet-main"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_subnet.web",
+      "type": "azurerm_subnet",
+      "change": { "actions": ["create"], "before": null, "after": {"name": "web-subnet"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_subnet.api",
+      "type": "azurerm_subnet",
+      "change": { "actions": ["create"], "before": null, "after": {"name": "api-subnet"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_subnet.db",
+      "type": "azurerm_subnet",
+      "change": { "actions": ["create"], "before": null, "after": {"name": "db-subnet"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_network_security_group.web",
+      "type": "azurerm_network_security_group",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "web-nsg"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_network_security_group.api",
+      "type": "azurerm_network_security_group",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "api-nsg"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_network_security_group.db",
+      "type": "azurerm_network_security_group",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "db-nsg"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_route_table.main",
+      "type": "azurerm_route_table",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "main-rt"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_network_interface.web",
+      "type": "azurerm_network_interface",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "web-nic"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_network_interface.api",
+      "type": "azurerm_network_interface",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "api-nic"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_public_ip.web",
+      "type": "azurerm_public_ip",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "web-pip"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_storage_account.diag",
+      "type": "azurerm_storage_account",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "diagstorage"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_key_vault.main",
+      "type": "azurerm_key_vault",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "main-kv"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_dns_zone.example",
+      "type": "azurerm_dns_zone",
+      "change": { "actions": ["create"], "before": null, "after": {"name": "example.com"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_log_analytics_workspace.main",
+      "type": "azurerm_log_analytics_workspace",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "main-law"}, "after_unknown": {"id": true} }
+    },
+    {
+      "address": "azurerm_user_assigned_identity.app",
+      "type": "azurerm_user_assigned_identity",
+      "change": { "actions": ["create"], "before": null, "after": {"location": "eastus", "name": "app-identity"}, "after_unknown": {"id": true} }
+    }
+  ]
+}
