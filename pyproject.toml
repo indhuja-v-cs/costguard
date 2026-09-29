@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "costguard"
+version = "0.1.0"
+description = "CLI tool that analyzes Terraform plans and estimates Azure infrastructure cost impact"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "CostGuard Team"},
+]
+keywords = ["terraform", "azure", "cost", "finops", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+costguard = "costguard.cli:main_cli"
+
+[tool.setuptools.packages.find]
+include = ["costguard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
