@@ -1,0 +1,45 @@
+# CostGuard cache
+pricing_cache.db
+
+# Terraform
+*.tfplan
+*.plan
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tf.json
+
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
