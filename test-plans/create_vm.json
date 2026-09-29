@@ -1,0 +1,91 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.5.7",
+  "resource_changes": [
+    {
+      "address": "azurerm_resource_group.example",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "location": "eastus",
+          "name": "example-resources",
+          "tags": {}
+        },
+        "after_unknown": {
+          "id": true
+        }
+      }
+    },
+    {
+      "address": "azurerm_virtual_network.example",
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "address_space": ["10.0.0.0/16"],
+          "location": "eastus",
+          "name": "example-vnet"
+        },
+        "after_unknown": {
+          "id": true
+        }
+      }
+    },
+    {
+      "address": "azurerm_linux_virtual_machine.web",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "web",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "admin_username": "azureuser",
+          "location": "East US",
+          "name": "web-vm",
+          "resource_group_name": "example-resources",
+          "size": "Standard_B2s",
+          "tags": {
+            "environment": "production"
+          }
+        },
+        "after_unknown": {
+          "id": true,
+          "private_ip_address": true,
+          "public_ip_address": true
+        }
+      }
+    },
+    {
+      "address": "azurerm_managed_disk.data",
+      "mode": "managed",
+      "type": "azurerm_managed_disk",
+      "name": "data",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "location": "East US",
+          "name": "data-disk",
+          "storage_account_type": "Premium_LRS",
+          "disk_size_gb": 128,
+          "create_option": "Empty"
+        },
+        "after_unknown": {
+          "id": true
+        }
+      }
+    }
+  ]
+}
